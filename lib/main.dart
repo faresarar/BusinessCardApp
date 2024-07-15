@@ -14,9 +14,10 @@ class BusinessCardApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: const Color(0xFF2B475E),
         body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const CircleAvatar(
-              radius: 122,
+              radius: 112,
               backgroundColor: Colors.white,
               child: CircleAvatar(
                 backgroundImage: AssetImage("assets/images/tharwat.png"),
@@ -38,6 +39,10 @@ class BusinessCardApp extends StatelessWidget {
                   color: Color(0xFF6C8090),
                   fontSize: 12,
                   fontWeight: FontWeight.bold),
+            ),
+            const Divider(
+              color: Color(0xFF6C8090),
+              thickness: 2,
             ),
             Padding(
               padding: const EdgeInsets.all(16),
@@ -66,13 +71,12 @@ class BusinessCardApp extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(16),
               child: Container(
-                //color: Colors.white, you cant declare both of color and decoration
+                  //color: Colors.white, you cant declare both of color and decoration
                   height: 65,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: Colors.white),
                   child: const Row(
-                    mainAxisSize: MainAxisSize.min,
                     children: [
                       Icon(
                         Icons.mail,
@@ -83,11 +87,9 @@ class BusinessCardApp extends StatelessWidget {
                         "faresarar455@gmail.com",
                         style: TextStyle(fontSize: 24),
                       ),
-                      Spacer(flex: 1)
                     ],
                   )),
             ),
-
           ],
         ),
       ),
