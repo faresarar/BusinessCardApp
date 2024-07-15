@@ -45,7 +45,7 @@ class BusinessCardApp extends StatelessWidget {
               thickness: 2,
             ),
             Padding(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Container(
                   //color: Colors.white, you cant declare both of color and decoration
                   height: 65,
@@ -68,28 +68,26 @@ class BusinessCardApp extends StatelessWidget {
                     ],
                   )),
             ),
-            Padding(
-              padding: const EdgeInsets.all(16),
-              child: Container(
-                  //color: Colors.white, you cant declare both of color and decoration
-                  height: 65,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white),
-                  child: const Row(
-                    children: [
-                      Icon(
-                        Icons.mail,
-                        size: 32,
-                        color: Color(0xFF2B475E),
-                      ),
-                      Text(
-                        "faresarar455@gmail.com",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                    ],
-                  )),
-            ),
+            Container(
+                //color: Colors.white, you cant declare both of color and decoration
+                height: 65,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white),
+                margin: const EdgeInsets.symmetric(horizontal: 16 , vertical: 8),
+                child: const Row(
+                  children: [
+                    Icon(
+                      Icons.mail,
+                      size: 32,
+                      color: Color(0xFF2B475E),
+                    ),
+                    Text(
+                      "faresarar455@gmail.com",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                  ],
+                )),
           ],
         ),
       ),
