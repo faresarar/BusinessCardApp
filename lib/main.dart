@@ -44,50 +44,46 @@ class BusinessCardApp extends StatelessWidget {
               color: Color(0xFF6C8090),
               thickness: 2,
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Container(
-                  //color: Colors.white, you cant declare both of color and decoration
-                  height: 65,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white),
-                  child: const Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Icon(
-                        Icons.phone,
-                        size: 32,
-                        color: Color(0xFF2B475E),
-                      ),
-                      Text(
-                        "(+231) 0657248608",
-                        style: TextStyle(fontSize: 24),
-                      ),
-                      Spacer(flex: 1)
-                    ],
-                  )),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              margin: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 8,
+              ),
+              child: const ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  size: 32,
+                  color: Color(0xFF2B475E),
+                ),
+                title: Text(
+                  "(+231) 0657248608",
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
             ),
-            Container(
-                //color: Colors.white, you cant declare both of color and decoration
-                height: 65,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white),
-                margin: const EdgeInsets.symmetric(horizontal: 16 , vertical: 8),
-                child: const Row(
-                  children: [
-                    Icon(
-                      Icons.mail,
-                      size: 32,
-                      color: Color(0xFF2B475E),
-                    ),
-                    Text(
-                      "faresarar455@gmail.com",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                  ],
-                )),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8),
+              ),
+              margin: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 8,
+              ),
+              child: const ListTile(
+                leading: Icon(
+                  Icons.mail,
+                  size: 32,
+                  color: Color(0xFF2B475E),
+                ),
+                title: Text(
+                  "faresarar455@gmail.com",
+                  style: TextStyle(fontSize: 24),
+                ),
+              ),
+            ),
           ],
         ),
       ),
